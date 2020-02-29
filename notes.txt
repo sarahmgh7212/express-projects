@@ -1,0 +1,29 @@
+The general rule of Node is that if you plan to use an npm module with require(), then you need to install it locally (i.e., in node_modules). Thus, for a new project, create a folder and a package.json file:
+1)mkdir express-hello-world
+2)cd express-hello-world
+3)npm init -y
+
+Then, you can install express as a dependency locally:
+C:\Users\sarah\Documents\Javascript-pluralsight\express-hello-world>npm install express
+
+Then install node-dev:
+C:\Users\sarah\Documents\Javascript-pluralsight\express-hello-world> npm i node-dev -E
+
+
+
+C:\Users\sarah\Documents\Javascript-pluralsight\express-hello-world> npm i node-dev -ED
+
+In package.json it should be like this:
+{
+  "name": "express-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-dev server.js"
+  },
+5)npm start
+6)curl localhost:3000 
+result: hello world
+7)curl localhost:3000/ -i
